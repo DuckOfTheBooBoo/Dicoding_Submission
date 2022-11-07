@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">Dicoding Submission</string>
     <string name="member_name">Nama Member</string>
+    <string name="coba_intent">OOOYYYYYY</string>
+    <string name="member_photo_desc">Member Photo</string>
+    <string name="lorem_dummy">Lorem ipsum dolor sit amet. Eos voluptatem minima eum aspernatur voluptate id sequi autem qui accusantium exercitationem nam nulla saepe. Hic explicabo nemo in nulla molestiae est fuga rerum est dolorem reprehenderit et veniam praesentium id eveniet repellat et fuga odio.</string>
+    <string name="name_table">Nama:</string>
+    <string name="tanggal_lahir_table">Tanggal Lahir:</string>
+    <string name="position_table">Posisi:</string>
+    <string name="instagram_table">Instagram:</string>
+    <string name="pd48_final_rank">PD48 Final Rank:</string>
 </resources>

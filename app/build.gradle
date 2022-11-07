@@ -3,12 +3,13 @@ plugins {
     id 'org.jetbrains.kotlin.android'
 }
 
+
 android {
-    namespace 'com.example.dicodingsubmission'
+    namespace 'com.arajdianaltaf.dicodingsubmission'
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.example.dicodingsubmission"
+        applicationId "com.arajdianaltaf.dicodingsubmission"
         minSdk 21
         targetSdk 32
         versionCode 1

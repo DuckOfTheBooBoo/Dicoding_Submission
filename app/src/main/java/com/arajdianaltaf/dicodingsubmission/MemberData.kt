@@ -1,4 +1,4 @@
-package com.example.dicodingsubmission
+package com.arajdianaltaf.dicodingsubmission
 
 object MemberData {
     private val memberNames = arrayOf(
@@ -171,7 +171,7 @@ object MemberData {
         "https://www.instagram.com/for_everyoung10/"
     )
 
-    private val memberPdRank = intArrayOf(
+    private val memberPd48Rank = intArrayOf(
 //      Kwon Eun Bi
         7,
 
@@ -235,7 +235,7 @@ object MemberData {
                 member.birthdate = memberBirthDate[position]
                 member.position = memberPosition[position]
                 member.instagram = memberInstagram[position]
-                member.pdRank = memberPdRank[position]
+                member.pd48Rank = memberPd48Rank[position]
                 member.photo = memberPhotos[position]
 
                 list.add(member)

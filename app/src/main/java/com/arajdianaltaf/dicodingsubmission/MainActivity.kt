@@ -1,5 +1,6 @@
-package com.example.dicodingsubmission
+package com.arajdianaltaf.dicodingsubmission
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -12,7 +13,9 @@ class MainActivity : AppCompatActivity() {
     private var list: ArrayList<Member> = arrayListOf()
 
     private fun showSelectedMember(member: Member) {
-        Toast.makeText(this, "You clicked on " + member.name, Toast.LENGTH_SHORT).show()
+//        Toast.makeText(this, "You clicked on " + member.name, Toast.LENGTH_SHORT).show()
+        val intent = Intent(this@MainActivity, DetailActivity::class.java)
+        startActivity(intent)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

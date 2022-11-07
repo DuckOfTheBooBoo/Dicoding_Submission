@@ -1,4 +1,4 @@
-package com.example.dicodingsubmission
+package com.arajdianaltaf.dicodingsubmission
 
 data class Member (
     var name: String = "",
@@ -6,6 +6,6 @@ data class Member (
     var birthdate: String = "",
     var position: String = "",
     var instagram: String = "",
-    var pdRank: Int = 0,
+    var pd48Rank: Int = 0,
     var photo: Int = 0
 )

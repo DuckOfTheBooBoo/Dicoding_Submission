@@ -1,4 +1,4 @@
-package com.example.dicodingsubmission
+package com.arajdianaltaf.dicodingsubmission
 
 import android.view.LayoutInflater
 import android.view.View

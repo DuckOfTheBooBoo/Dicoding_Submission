@@ -1,4 +1,4 @@
-package com.example.dicodingsubmission
+package com.arajdianaltaf.dicodingsubmission
 
 import org.junit.Test
 
