@@ -31,6 +31,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        supportActionBar?.title = "IZ*ONE Wiki"
+
         rvMembers = findViewById(R.id.rv_members)
         rvMembers.setHasFixedSize(true)
 

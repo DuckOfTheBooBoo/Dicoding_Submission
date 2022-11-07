@@ -23,6 +23,24 @@ class DetailActivity : AppCompatActivity(), View.OnClickListener {
         const val EXTRA_INSTA = "extra_insta"
     }
 
+//    TODO: Calculate age based on birth date and current date (https://stackoverflow.com/a/46038561/16899959), (https://stackoverflow.com/a/59609344/16899959)
+    private fun getAge(dateString: String){
+        val monthNum = mapOf(
+            "Januari" to 1,
+            "Februari" to 2,
+            "Maret" to 3,
+            "April" to 4,
+            "Mei" to 5,
+            "Juni" to 6,
+            "Juli" to 7,
+            "Agustus" to 8,
+            "September" to 9,
+            "Oktober" to 10,
+            "November" to 11,
+            "Desember" to 12
+        )
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
@@ -53,6 +71,8 @@ class DetailActivity : AppCompatActivity(), View.OnClickListener {
         positionMember.text = intent.getStringExtra(EXTRA_POS)
         pd48RankMember.text = intent.getStringExtra(EXTRA_PD48RANK)
         "@${username}".also { instaMemberBtn.text = it }
+
+        supportActionBar?.title = nameMember.text
 
 //        Instagram Button
         instaMemberBtn.setOnClickListener(this)
