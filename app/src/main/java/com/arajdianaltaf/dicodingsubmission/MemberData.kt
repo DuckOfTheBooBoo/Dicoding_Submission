@@ -17,7 +17,6 @@ object MemberData {
 
     )
 
-//    TODO: Make member details in Indonesian
 
     private val memberDetails = arrayOf(
 //      Kwon Eun Bi
@@ -162,7 +161,7 @@ object MemberData {
         "https://www.instagram.com/10_hitomi_06/",
 
     //      Jo Yu Ri
-        "https://www.instagram.com/z0__glasss/",
+        "https://www.instagram.com/zo__glasss/",
 
     //      Ahn Yu Jin
         "https://www.instagram.com/_yujin_an/",
@@ -171,42 +170,42 @@ object MemberData {
         "https://www.instagram.com/for_everyoung10/"
     )
 
-    private val memberPd48Rank = intArrayOf(
+    private val memberPd48Rank = arrayOf(
 //      Kwon Eun Bi
-        7,
+        "7th",
 
 //      Miyawaki Sakura
-        2,
+        "2nd",
 
 //      Kang Hye Won
-        8,
+        "8th",
 
 //      Choi Ye Na
-        4,
+        "4th",
 
 //      Lee Chae Yeon
-        12,
+        "12th",
 
 //      Kim Chae Won
-        10,
+        "10th",
 
 //      Kim Min Ju
-        11,
+        "11th",
 
 //      Yabuki Nako
-        6,
+        "6th",
 
 //      Honda Hitomi
-        9,
+        "9th",
 
 //      Jo Yu Ri
-        3,
+        "3rd",
 
 //      Ahn Yu Jin
-        5,
+        "5th",
 
 //      Jang Won Young
-        1
+        "1st"
     )
 
     private val memberPhotos = intArrayOf(

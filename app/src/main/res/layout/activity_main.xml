@@ -8,12 +8,11 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-<!--    TODO: Define the What The Main Page Gonna Looks Like First-->
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_members"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         tools:listitem="@layout/row_member"/>
 
 

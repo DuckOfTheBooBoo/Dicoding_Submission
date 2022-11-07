@@ -12,10 +12,19 @@ class MainActivity : AppCompatActivity() {
     private lateinit var rvMembers: RecyclerView
     private var list: ArrayList<Member> = arrayListOf()
 
-    private fun showSelectedMember(member: Member) {
-//        Toast.makeText(this, "You clicked on " + member.name, Toast.LENGTH_SHORT).show()
-        val intent = Intent(this@MainActivity, DetailActivity::class.java)
-        startActivity(intent)
+    private fun showSelectedMemberDetails(member: Member) {
+        val detailIntent = Intent(this@MainActivity, DetailActivity::class.java)
+
+        detailIntent.putExtra(DetailActivity.EXTRA_DETAIL,  member.detail)
+        detailIntent.putExtra(DetailActivity.EXTRA_NAME, member.name)
+        detailIntent.putExtra(DetailActivity.EXTRA_BIRTH, member.birthdate)
+        detailIntent.putExtra(DetailActivity.EXTRA_POS, member.position)
+        detailIntent.putExtra(DetailActivity.EXTRA_PD48RANK, member.pd48Rank)
+        detailIntent.putExtra(DetailActivity.EXTRA_INSTA, member.instagram)
+        detailIntent.putExtra(DetailActivity.EXTRA_IMG, member.photo)
+
+        startActivity(detailIntent)
+
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,7 +46,7 @@ class MainActivity : AppCompatActivity() {
 
         listMemberAdapter.setOnItemClickCallback(object: ListMemberAdapter.OnItemClickCallback {
             override fun onItemClicked(data: Member) {
-                showSelectedMember(data)
+                showSelectedMemberDetails(data)
             }
         })
 

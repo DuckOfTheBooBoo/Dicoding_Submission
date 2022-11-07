@@ -6,6 +6,6 @@ data class Member (
     var birthdate: String = "",
     var position: String = "",
     var instagram: String = "",
-    var pd48Rank: Int = 0,
+    var pd48Rank: String = "",
     var photo: Int = 0
 )
