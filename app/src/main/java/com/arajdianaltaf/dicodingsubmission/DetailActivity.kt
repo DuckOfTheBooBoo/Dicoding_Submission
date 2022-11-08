@@ -74,9 +74,16 @@ class DetailActivity : AppCompatActivity(), View.OnClickListener {
 
         supportActionBar?.title = nameMember.text
 
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
 //        Instagram Button
         instaMemberBtn.setOnClickListener(this)
 
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        this.finish()
+        return super.onSupportNavigateUp()
     }
 
     override fun onClick(v: View?) {

@@ -9,6 +9,12 @@ class AboutActivity : AppCompatActivity() {
         setContentView(R.layout.activity_about)
 
 
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        this.finish()
+        return super.onSupportNavigateUp()
     }
 }
