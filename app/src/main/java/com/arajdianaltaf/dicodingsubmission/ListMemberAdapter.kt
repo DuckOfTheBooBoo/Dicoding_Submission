@@ -19,7 +19,6 @@ class ListMemberAdapter(private val listMember: ArrayList<Member>): RecyclerView
 
     inner class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var tvName: TextView = itemView.findViewById(R.id.tv_member_name)
-//        var tvDetail: TextView = itemView.findViewById(R.id.tv_member)
         var imgPhoto: ImageView = itemView.findViewById(R.id.img_member_photo)
     }
 
@@ -32,7 +31,7 @@ class ListMemberAdapter(private val listMember: ArrayList<Member>): RecyclerView
         val member = listMember[position]
 
         Glide.with(holder.itemView.context)
-            .load(member.photo)
+            .load(member.photoFace)
             .apply(RequestOptions().fitCenter())
             .into(holder.imgPhoto)
 

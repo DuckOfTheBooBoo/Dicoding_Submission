@@ -223,19 +223,36 @@ object MemberData {
         R.drawable.jang_won_young
     )
 
+//    TODO: Make each member photo with their face focused
+    private val memberFacePhoto = intArrayOf(
+        R.drawable.face_kwon_eun_bi,
+        R.drawable.face_miyawaki_sakura,
+        R.drawable.face_kang_hye_won,
+        R.drawable.face_choi_ye_na,
+        R.drawable.face_lee_chae_yeon,
+        R.drawable.face_kim_chae_won,
+        R.drawable.face_kim_min_ju,
+        R.drawable.face_yabuki_nako,
+        R.drawable.face_honda_hitomi,
+        R.drawable.face_jo_yu_ri,
+        R.drawable.face_ahn_yu_jin,
+        R.drawable.face_jang_won_young
+    )
+
     val listData: ArrayList<Member>
         get() {
             val list = arrayListOf<Member>()
-            for (position in memberNames.indices) {
+            for (pos in memberNames.indices) {
                 val member = Member()
 
-                member.name = memberNames[position]
-                member.detail = memberDetails[position]
-                member.birthdate = memberBirthDate[position]
-                member.position = memberPosition[position]
-                member.instagram = memberInstagram[position]
-                member.pd48Rank = memberPd48Rank[position]
-                member.photo = memberPhotos[position]
+                member.name = memberNames[pos]
+                member.detail = memberDetails[pos]
+                member.birthdate = memberBirthDate[pos]
+                member.position = memberPosition[pos]
+                member.instagram = memberInstagram[pos]
+                member.pd48Rank = memberPd48Rank[pos]
+                member.photo = memberPhotos[pos]
+                member.photoFace = memberFacePhoto[pos]
 
                 list.add(member)
 

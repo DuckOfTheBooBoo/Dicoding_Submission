@@ -27,4 +27,18 @@
     <style name="matchWrap.TableRow">
         <item name="android:layout_marginBottom">8dp</item>
     </style>
+
+    <style name="ActionButton" parent="@android:style/Widget.ActionButton">
+        <item name="android:drawablePadding">@dimen/action_button_padding</item>
+    </style>
+
+    <dimen name="action_button_padding">4dp</dimen>
+
+    <style name="Theme.MyTheme"
+        parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- other styles -->
+        <item name="android:actionButtonStyle">@style/ActionButton</item>
+    </style>
+
+
 </resources>

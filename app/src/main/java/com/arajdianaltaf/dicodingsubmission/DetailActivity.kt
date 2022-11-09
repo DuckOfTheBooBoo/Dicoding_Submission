@@ -8,6 +8,8 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import java.time.LocalDate
+import java.time.Period
 
 class DetailActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -23,8 +25,7 @@ class DetailActivity : AppCompatActivity(), View.OnClickListener {
         const val EXTRA_INSTA = "extra_insta"
     }
 
-//    TODO: Calculate age based on birth date and current date (https://stackoverflow.com/a/46038561/16899959), (https://stackoverflow.com/a/59609344/16899959)
-    private fun getAge(dateString: String){
+    private fun getAge(dateString: String): Int{
         val monthNum = mapOf(
             "Januari" to 1,
             "Februari" to 2,
@@ -39,6 +40,17 @@ class DetailActivity : AppCompatActivity(), View.OnClickListener {
             "November" to 11,
             "Desember" to 12
         )
+
+        val splittedDate = dateString.split(" ").toTypedArray()
+        val day = splittedDate[0].toInt()
+        val month = monthNum[splittedDate[1]]
+        val year = splittedDate[2].toInt()
+
+        return Period.between(
+            month?.let { LocalDate.of(year, it, day) },
+            LocalDate.now()
+        ).years
+
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -64,10 +76,12 @@ class DetailActivity : AppCompatActivity(), View.OnClickListener {
         instagramLink = intent.getStringExtra(EXTRA_INSTA)
         val username = instagramLink?.replace("https://www.instagram.com/", "")?.replace("/", "")
 
+        val birthDate = intent.getStringExtra(EXTRA_BIRTH)
+
+        "$birthDate (${birthDate?.let { getAge(it)}})".also { birthdateMember.text = it}
 
         detMember.text = intent.getStringExtra(EXTRA_DETAIL)
         nameMember.text = intent.getStringExtra(EXTRA_NAME)
-        birthdateMember.text = intent.getStringExtra(EXTRA_BIRTH)
         positionMember.text = intent.getStringExtra(EXTRA_POS)
         pd48RankMember.text = intent.getStringExtra(EXTRA_PD48RANK)
         "@${username}".also { instaMemberBtn.text = it }

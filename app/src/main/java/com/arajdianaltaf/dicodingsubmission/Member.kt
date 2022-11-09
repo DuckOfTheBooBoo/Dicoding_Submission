@@ -7,5 +7,6 @@ data class Member (
     var position: String = "",
     var instagram: String = "",
     var pd48Rank: String = "",
-    var photo: Int = 0
+    var photo: Int = 0,
+    var photoFace: Int = 0,
 )
