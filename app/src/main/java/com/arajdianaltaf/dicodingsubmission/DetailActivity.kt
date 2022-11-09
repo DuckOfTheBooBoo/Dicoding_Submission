@@ -25,34 +25,6 @@ class DetailActivity : AppCompatActivity(), View.OnClickListener {
         const val EXTRA_INSTA = "extra_insta"
     }
 
-    private fun getAge(dateString: String): Int{
-        val monthNum = mapOf(
-            "Januari" to 1,
-            "Februari" to 2,
-            "Maret" to 3,
-            "April" to 4,
-            "Mei" to 5,
-            "Juni" to 6,
-            "Juli" to 7,
-            "Agustus" to 8,
-            "September" to 9,
-            "Oktober" to 10,
-            "November" to 11,
-            "Desember" to 12
-        )
-
-        val splittedDate = dateString.split(" ").toTypedArray()
-        val day = splittedDate[0].toInt()
-        val month = monthNum[splittedDate[1]]
-        val year = splittedDate[2].toInt()
-
-        return Period.between(
-            month?.let { LocalDate.of(year, it, day) },
-            LocalDate.now()
-        ).years
-
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
@@ -76,9 +48,7 @@ class DetailActivity : AppCompatActivity(), View.OnClickListener {
         instagramLink = intent.getStringExtra(EXTRA_INSTA)
         val username = instagramLink?.replace("https://www.instagram.com/", "")?.replace("/", "")
 
-        val birthDate = intent.getStringExtra(EXTRA_BIRTH)
-
-        "$birthDate (${birthDate?.let { getAge(it)}})".also { birthdateMember.text = it}
+        birthdateMember.text = intent.getStringExtra(EXTRA_BIRTH)
 
         detMember.text = intent.getStringExtra(EXTRA_DETAIL)
         nameMember.text = intent.getStringExtra(EXTRA_NAME)
